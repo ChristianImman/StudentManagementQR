@@ -3,7 +3,7 @@ Student Management System using a QR code with a QR generator on the login page 
 ![landing page](https://github.com/user-attachments/assets/f88f1698-d6aa-462e-8ea8-34261fbb01bc)
 
 
-2.Qr Generator
+2. Qr Generator
 ![QR Generator](https://github.com/user-attachments/assets/f50c6f31-6b04-42e5-af72-fc4172211eeb)
 
 
