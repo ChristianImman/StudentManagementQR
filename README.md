@@ -20,4 +20,4 @@ Student Management System using a QR code with a QR generator on the login page 
 
 
 6. Student File Tab
-![Student File Tab](https://github.com/user-attachments/assets/6b6e0113-b645-4aaa-9f32-10fa70e74157)
+![Student File Tab](https://github.com/user-attachments/assets/3f990628-7823-4e87-80f1-e6c5c07a969f)
