@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.logo {
+    text-align: center; /* Center the logo */
+    margin-bottom: 10px; /* Reduced space below the logo */
+    max-height: 250px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Change to flex-start to move content to the top */
+    min-height: 100vh;
+    background: url('../bg/bg-logo.jpg') no-repeat center center fixed; /* Adjust for centering */
+    background-size: cover;
+    padding-top: 20px; /* Optional: Add some padding at the top */
+}
+
+.wrapper {
+    width: 420px;
+    background: rgba(0, 0, 0, 0.7); /* Darker semi-transparent black background */
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    text-align: center; 
+    box-shadow: 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper h1 {
+    font-size: 28px; /* Reduced heading font size */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.wrapper .error-message {
+    color: #ff4d4d; /* Red color for error message */
+    background: rgba(255, 0, 0, 0.1); /* Light red background */
+    border: 1px solid #ff4d4d; /* Red border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding around the text */
+    margin-bottom: 15px; /* Space below the error message */
+    text-align: center; /* Center the text */
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 15px 0; /* Reduced margin for more compact layout */
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 45px 10px 50px; /* Adjust padding for a snug fit */
+}
+
+.input-box input::placeholder {
+    color: #ffff;
+}
+
+.input-box i {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .remember {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: 10px 0; /* Reduced margin */
+}
+
+.remember label input {
+    accent-color: #fff; /* Changed checkbox color */
+    margin-right: 3px; /* Space between checkbox and label */
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Modal Styles Qr Generator */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #f9f9f9; /* Updated to light gray background */
+    margin: 50px auto; /* Center the modal and add top margin */
+    padding: 20px; /* Adjusted padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 40%; /* Fixed width */
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group div {
+    flex: 1; /* Allow input to grow */
+    margin-right: 10px; /* Add space between inputs */
+}
+
+.form-group div:last-child {
+    margin-right: 0; /* Remove margin for last input */
+}
+
+.modal-content label {
+    display: block; /* Make label a block element */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="date"],
+.modal-content select {
+    width: 100%; /* Full width */
+    padding: 10px; /* Increased padding */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.status-dropdown {
+    width: 30%; /* Set width to 30% for the status dropdown */
+}
+
+.modal-content button {
+    background-color: #28a745; /* Green button background */
+    border: none; /* No border */
+    color: white; /* White text */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    margin-top: 10px; /* Spacing above the button */
+}
+
+.modal-content button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.close {
+    color: #aaa; /* Close button color */
+    float: right; /* Float right */
+    font-size: 28px; /* Font size */
+    font-weight: bold; /* Bold text */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Change color on hover/focus */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Error and Success Message */
+.message {
+    display: none; /* Hidden by default */
+    padding: 15px;
+    margin: 20px;
+    border-radius: 5px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+.success {
+    background-color: #d4edda; /* Light green */
+    color: #155724; /* Dark green */
+    border: 1px solid #c3e6cb; /* Green border */
+}
+.error {
+    background-color: #f8d7da; /* Light red */
+    color: #721c24; /* Dark red */
+    border: 1px solid #f5c6cb; /* Red border */
+}
