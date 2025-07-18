@@ -1,0 +1,5 @@
+# Disable directory listing
+Options -Indexes
+
+# Define the default page for the dashboard directory
+DirectoryIndex dashboard.php
